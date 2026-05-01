@@ -381,7 +381,7 @@ function getScoreShape(scoreText: string, parText: string): "none" | "circle" | 
     return "none";
   }
 
-  if (score >= SCORE_MAX) {
+  if (score >= SCORE_MAX || score - par >= 3) {
     return "doubleSquare";
   }
 
