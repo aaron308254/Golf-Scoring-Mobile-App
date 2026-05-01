@@ -1172,8 +1172,12 @@ export default function App() {
             <View style={styles.plusBadge}>
               <Text style={styles.plusBadgeText}>+</Text>
             </View>
-            <Text style={styles.tilePrimary}>Add New</Text>
-            <Text style={styles.tilePrimary}>Scorecard</Text>
+            <Text style={styles.tilePrimary} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.65}>
+              Add New
+            </Text>
+            <Text style={styles.tilePrimary} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.65}>
+              Scorecard
+            </Text>
           </Pressable>
 
           {scorecards.map((scorecard) => (
@@ -1182,7 +1186,15 @@ export default function App() {
               style={({ pressed }) => [styles.tile, pressed && styles.pressed]}
               onPress={() => openScorecardView(scorecard.id)}
             >
-              <Text style={styles.tileTitle}>{scorecard.courseName}</Text>
+              <Text
+                style={styles.tileTitle}
+                numberOfLines={2}
+                adjustsFontSizeToFit
+                minimumFontScale={0.6}
+                ellipsizeMode="tail"
+              >
+                {scorecard.courseName}
+              </Text>
               <Text style={styles.tileSubtitle}>{getScorecardSubtitle(scorecard)}</Text>
             </Pressable>
           ))}
@@ -1212,8 +1224,12 @@ export default function App() {
             <View style={styles.plusBadge}>
               <Text style={styles.plusBadgeText}>+</Text>
             </View>
-            <Text style={styles.tilePrimary}>Create New</Text>
-            <Text style={styles.tilePrimary}>Profile</Text>
+            <Text style={styles.tilePrimary} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.65}>
+              Create New
+            </Text>
+            <Text style={styles.tilePrimary} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.65}>
+              Profile
+            </Text>
           </Pressable>
 
           {profiles.map((profile) => (
@@ -1222,7 +1238,15 @@ export default function App() {
               style={({ pressed }) => [styles.tile, pressed && styles.pressed]}
               onPress={() => openProfileDetail(profile.id)}
             >
-              <Text style={styles.tileTitle}>{profile.name}</Text>
+              <Text
+                style={styles.tileTitle}
+                numberOfLines={2}
+                adjustsFontSizeToFit
+                minimumFontScale={0.6}
+                ellipsizeMode="tail"
+              >
+                {profile.name}
+              </Text>
               <Text style={styles.tileSubtitle}>Age {calculateAge(profile.dateOfBirth)}</Text>
             </Pressable>
           ))}
@@ -1635,7 +1659,9 @@ function ScorecardShell({
       <View style={styles.scorecardBackdrop} />
       <ScrollView contentContainerStyle={styles.scorecardShellContent}>
         <View style={styles.scorecardShell}>
-          <Text style={styles.scorecardTitle}>{title}</Text>
+          <Text style={styles.scorecardTitle} numberOfLines={2} adjustsFontSizeToFit minimumFontScale={0.68}>
+            {title}
+          </Text>
           <Text style={styles.scorecardSubtitle}>{subtitle}</Text>
           <View style={styles.chipRow}>
             {chips.map((chip) => (
@@ -2225,11 +2251,13 @@ const styles = StyleSheet.create({
     fontSize: 23,
     fontWeight: "800",
     textAlign: "center",
+    width: "100%",
   },
   tileTitle: {
     color: "#12261d",
     fontSize: 24,
     fontWeight: "800",
+    flexShrink: 1,
   },
   tileSubtitle: {
     color: "#52675c",
