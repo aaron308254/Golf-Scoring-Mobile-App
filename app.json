@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Golf Scoring",
+    "slug": "golf-scoring-ios-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aaron.golfscoring"
+    },
+    "android": {
+      "package": "com.aaron.golfscoring"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
