@@ -21,15 +21,17 @@ The app is designed for quick round entry on iPhone, including landscape scoreca
 
 ## Screenshots
 
-Add exported screenshots from the app to `docs/images/`, then replace the placeholder labels below with image links.
-
-| Home | Create Scorecard | Scorecard Entry |
+| Home | Create Scorecard | Profiles |
 | --- | --- | --- |
-| Home screen screenshot | Create scorecard screenshot | Scorecard entry screenshot |
+| ![Home screen](docs/images/HomeScreen.png) | ![Create scorecard screen](docs/images/CreateScorecard.png) | ![Profiles page](docs/images/ProfilesPage.png) |
 
-| Profile Detail | Landscape Scorecard |
+| Choose or Create Profile | Profile Stats |
 | --- | --- |
-| Profile detail screenshot | Landscape scorecard screenshot |
+| ![Choose or create profile sheet](docs/images/ScorecardProfileChooseCreate.png) | ![Profile stats screen](docs/images/ProfileStats.png) |
+
+| Landscape Scorecard Top | Landscape Scorecard Bottom |
+| --- | --- |
+| ![Landscape scorecard top](docs/images/ScorecardLandscapeTop.png) | ![Landscape scorecard bottom](docs/images/ScorecardLandscapeBottom.png) |
 
 ## Local Development
 
