@@ -1188,9 +1188,9 @@ export default function App() {
             >
               <Text
                 style={styles.tileTitle}
-                numberOfLines={2}
+                numberOfLines={1}
                 adjustsFontSizeToFit
-                minimumFontScale={0.6}
+                minimumFontScale={0.45}
                 ellipsizeMode="tail"
               >
                 {scorecard.courseName}
