@@ -1,37 +1,80 @@
-# Golf Scoring iOS App
+# Golf Scoring Mobile App
 
-Lightweight Expo + TypeScript starter for building the app on Windows and later installing it to an iPhone from a MacBook.
+Golf Scoring is an Expo React Native app for tracking golf rounds, player profiles, scorecards, and course history from a phone.
 
-## What this project is set up for
+The app is designed for quick round entry on iPhone, including landscape scorecard entry when a wider view is needed.
 
-- Fast editing in VS Code on this PC
-- Early testing with Expo on Windows
-- Later iPhone install/signing from a MacBook with Xcode
+## Features
 
-## Recommended workflow
+- Create 9-hole or 18-hole scorecards.
+- Track course name, date, difficulty, tees, par, yardage, and player strokes.
+- Assign reusable player profiles to scorecards.
+- Prevent duplicate profile names.
+- Edit player profile name and date of birth after creation.
+- Automatically calculate scorecard totals for par and player strokes.
+- Mark scoring results visually, including red square markers for triple bogey or worse.
+- Track player stats such as best round, worst round, handicap per 9 holes, handicap per 18 holes, and scoring tallies.
+- Remember previously played courses.
+- Suggest course names when creating a new scorecard.
+- Autofill par and yardage from a previous scorecard for the same course and hole count.
+- Save profiles and scorecards locally so data remains after closing and reopening the app.
 
-### On this PC
+## Screenshots
 
-1. Install Node.js LTS if it is not already installed.
-2. Run `npm install`
-3. Run `npx expo start`
-4. Test with:
-   - Expo Go on your iPhone
-   - Android emulator on Windows
-   - Web preview for rough UI checks
+Add exported screenshots from the app to `docs/images/`, then replace the placeholder labels below with image links.
 
-### On the MacBook
+| Home | Create Scorecard | Scorecard Entry |
+| --- | --- | --- |
+| Home screen screenshot | Create scorecard screenshot | Scorecard entry screenshot |
 
-1. Pull or copy this project over
-2. Run `npm install`
-3. Install Xcode
-4. Connect the iPhone to the MacBook
-5. Run Expo or open the iOS project later when we add native build steps
+| Profile Detail | Landscape Scorecard |
+| --- | --- |
+| Profile detail screenshot | Landscape scorecard screenshot |
 
-## Why Expo SDK 54
+## Local Development
 
-Expo's current docs note that during the SDK 55 transition, SDK 54 is the safer choice if you plan to use Expo Go on a physical device.
+Install dependencies:
 
-## Next step
+```bash
+npm install
+```
 
-Describe the screens and scoring flow you want, and we can build the first version directly in this starter.
+Start Expo:
+
+```bash
+npx expo start
+```
+
+Run the web preview:
+
+```bash
+npm run web
+```
+
+Run TypeScript checks:
+
+```bash
+npm run typecheck
+```
+
+## iPhone Testing
+
+The quickest testing path is Expo Go.
+
+1. Pull the latest code on the MacBook.
+2. Run `npm install`.
+3. Run `npx expo start`.
+4. Install Expo Go on the iPhone.
+5. Scan the QR code from the Expo terminal.
+
+If the phone cannot connect over the local network, use:
+
+```bash
+npx expo start --tunnel
+```
+
+## Data Storage
+
+The app stores scorecards and profiles locally with AsyncStorage. This keeps data available after closing and reopening the app on the same device.
+
+This is local persistence only. It does not sync data between devices yet.
